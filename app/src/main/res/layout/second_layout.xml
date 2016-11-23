@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_test2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#336ac2" />
+
+    <com.tiny.animation.AnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:background_color="@color/colorAccent"
+        app:content="@layout/test_layout"
+        app:duration="2000" />
+</RelativeLayout>

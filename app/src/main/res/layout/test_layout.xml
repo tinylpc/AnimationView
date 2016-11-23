@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:animateLayoutChanges="true"
+    android:background="#1ac3f5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="this is a test content,you can show your content"
+        android:textColor="#11ac39" />
+
+</LinearLayout>
