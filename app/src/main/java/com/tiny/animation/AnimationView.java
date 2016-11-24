@@ -59,6 +59,7 @@ public class AnimationView extends RelativeLayout {
 				.getColor(R.color.hard_grey));
 		contentId = typedArray.getResourceId(R.styleable.animatinview_content, R.layout.test_layout);
 		duration = typedArray.getInt(R.styleable.animatinview_duration, 1000);
+		typedArray.recycle();
 	}
 
 	/**
