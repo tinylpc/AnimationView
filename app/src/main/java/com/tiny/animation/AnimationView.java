@@ -7,6 +7,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.RelativeLayout;
 
 /**
@@ -113,8 +114,16 @@ public class AnimationView extends RelativeLayout {
 			contentView.setOnClickListener(v -> {
 			});
 
-			contentView.post(() -> ObjectAnimator.ofFloat(contentView, "translationY", contentView.getHeight(), 0)
-					.setDuration(duration).start());
+			contentView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+
+				@Override
+				public void onGlobalLayout() {
+
+					ObjectAnimator.ofFloat(contentView, "translationY", contentView.getHeight(), 0)
+							.setDuration(duration).start();
+					getViewTreeObserver().removeGlobalOnLayoutListener(this);
+				}
+			});
 		}
 	}
 
