@@ -164,4 +164,13 @@ public class AnimationView extends RelativeLayout {
 			animator.start();
 		}
 	}
+
+	/**
+	 * 是否正在展示中
+	 * @return
+	 */
+	public boolean isShowing() {
+
+		return isShowing;
+	}
 }
